@@ -11,3 +11,5 @@ function BookDetails(){
     </div>
   )
 }
+
+export default BookDetails;
