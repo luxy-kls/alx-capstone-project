@@ -10,4 +10,4 @@ function Browse(){
   ) ;
 } 
 
-export default Browser;
+export default Browse;
