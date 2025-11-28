@@ -35,6 +35,7 @@ function Home(){
     }
     fetchBooks();
   }, []);
-  
+  if(loading) return <LoadingSpinner />//... to show spinner while loading
+  if(error) return <ErrorMessage /> // ... to show error messages
   
 }
