@@ -35,8 +35,8 @@ function Home(){
     }
     fetchBooks();
   }, []);
-  if(loading) return <LoadingSpinner />//... to show spinner while loading
-  if(error) return <ErrorMessage /> // ... to show error messages
+  if(loading) return <LoadingSpinner />;//... to show spinner while loading
+  if(error) return <ErrorMessage message={error} />; // ... to show error messages
   
   // for the display session 
   return (
@@ -64,3 +64,5 @@ function Home(){
 );
   
 }
+
+export default Home;
