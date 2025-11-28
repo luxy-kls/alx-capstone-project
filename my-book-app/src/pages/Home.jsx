@@ -38,4 +38,29 @@ function Home(){
   if(loading) return <LoadingSpinner />//... to show spinner while loading
   if(error) return <ErrorMessage /> // ... to show error messages
   
+  // for the display session 
+  return (
+  <div className="home">
+    {/* Hero Section */}
+    <section className="hero">
+      <div className="hero-content">
+        <h1>📚 Discover Your Next Favorite Book</h1>
+        <p>Explore thousands of books, track your reading, and build your personal library</p>
+      </div>
+    </section>
+    
+    {/* Trending Books Section */}
+    <section className="book-section">
+      <h2>📖 Trending Now</h2>
+      <BookGrid books={trendingBooks.slice(0, 8)} />
+    </section>
+    
+    {/* Fiction Books Section */}
+    <section className="book-section">
+      <h2>✨ Popular Fiction</h2>
+      <BookGrid books={fictionBooks.slice(0, 8)} />
+    </section>
+  </div>
+);
+  
 }
