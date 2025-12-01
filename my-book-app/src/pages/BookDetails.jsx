@@ -95,7 +95,11 @@ const thumbnail = imageLinks?.thumbnail || 'placeholder'
     {/* Description Section */}
     <div className="book-description">
       <h2>About This Book</h2>
-      <p>{description || 'No description available.'}</p>
+      {description ? (
+  <div dangerouslySetInnerHTML={{ __html: description }} />
+) : (
+  <p>No description available.</p>
+)}
     </div>
     
     {/* Book Details Section */}
