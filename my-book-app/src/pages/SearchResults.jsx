@@ -1,4 +1,4 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import '../styles/SearchResults.css'
 import ErrorMessage from '../components/ErrorMessage';
@@ -17,25 +17,27 @@ function SearchResults(){
   const query = searchParams.get('q')
   
   useEffect(()=>{
+      if (!query) return;
     const fetchSearchResults = async ()=>{
       try {
         setLoading(true);
         
         const results = await searchBooks(query)
-        setBooks(result.items || []);
+        setBooks(results.items || []);
         
       } catch(err){
         setError(err.message) 
       } finally {
         setLoading(false);
-        fetchSearchResults();
       }
     }
+    fetchSearchResults();
   }, [query]);
   
   //Adding conditional statements
   if (loading) return <LoadingSpinner />
-  if (error) return <ErrorMessage message={ err } />
+  if (error) return <ErrorMessage message={ error } />
+
   
  return (
    <div className="search-results">
