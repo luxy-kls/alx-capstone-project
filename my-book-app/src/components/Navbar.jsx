@@ -7,7 +7,7 @@ function Navbar() {
   const [searchQuery ,setSearchQuery] = useState("");
   const navigate = useNavigate();
   const handleSearch = (e) => {
-    e.pdefaulDefault();
+    e.preventDefault();
     
     if(searchQuery.trim()) {
       navigate(`/search?q=${searchQuery}`);
