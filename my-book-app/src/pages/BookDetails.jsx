@@ -4,6 +4,7 @@ import '../styles/BookDetails.css'
 import { getBookById } from '../utils/api';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorMessage from '../components/ErrorMessage';
+import { useLibrary } from '../context/LibraryContext';
 
 
 
@@ -14,6 +15,11 @@ function BookDetails(){
   const [error, setError] = useState(null);
   
   const { id } = useParams();
+  
+    //using context
+  const { addToLibrary, isInLibrary } = useLibrary();
+  const bookSaved = isInLibrary(id);
+  
     useEffect(()=>{
       const fetchBook = async ()=>{
         try {
@@ -86,9 +92,13 @@ const thumbnail = imageLinks?.thumbnail || 'placeholder'
           </div>
         )}
         
-        <button className="add-to-library-btn">
-          Add to My Library
-        </button>
+        <button 
+        className="add-to-library-btn"
+        onClick={() => addToLibrary(book)}
+        disabled={bookSaved}
+>
+  {bookSaved ? '✓ In Library' : 'Add to My Library'}
+</button>
       </div>
     </div>
     
