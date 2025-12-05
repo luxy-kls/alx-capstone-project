@@ -5,13 +5,14 @@ import Browse from './pages/Browse.jsx';
 import BookDetails from './pages/BookDetails.jsx';
 import SearchResults from './pages/SearchResults.jsx';
 import MyLibrary from './pages/MyLibrary.jsx';
-
+import { LibraryProvider } from './context/LibraryContext.jsx'
 
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 
 function App() {
   return (
+    <LibraryProvider>
     <Router>
       <div className="App">
         <Navbar />
@@ -27,6 +28,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </LibraryProvider>
   );
 }
 
