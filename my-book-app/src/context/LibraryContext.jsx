@@ -1,11 +1,11 @@
 import React, { createContext, useContext } from 'react';
-import { useLocalStorage } from '../hooks/useLocalStorage';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 
 const LibraryContext = createContext();
 
 export const LibraryProvider= function ({ children}){
-  const [library, setLibrary] = useLocalStorage('myLibrary',[]);
+  const [library, setLibrary] = useLocalStorage('myLibrary', []);
 
 
 const addToLibrary = function(book){
