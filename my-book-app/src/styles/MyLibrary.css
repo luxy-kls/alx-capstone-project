@@ -1,0 +1,25 @@
+.my-library {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.my-library h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.my-library > p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Empty state */
+.my-library p:nth-of-type(2) {
+  text-align: center;
+  color: #999;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
