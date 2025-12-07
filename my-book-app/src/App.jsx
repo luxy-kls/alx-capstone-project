@@ -5,13 +5,18 @@ import Browse from './pages/Browse.jsx';
 import BookDetails from './pages/BookDetails.jsx';
 import SearchResults from './pages/SearchResults.jsx';
 import MyLibrary from './pages/MyLibrary.jsx';
-import { LibraryProvider } from './context/LibraryContext.jsx'
+import { LibraryProvider } from './context/LibraryContext.jsx';
+import { ThemeProvider } from './context/ThemeContext.jsx';
 
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 
+
+
 function App() {
+
   return (
+    <ThemeProvider  data-theme={theme}>
     <LibraryProvider>
     <Router>
       <div className="App">
@@ -29,6 +34,7 @@ function App() {
       </div>
     </Router>
     </LibraryProvider>
+    </ThemeProvider>
   );
 }
 

@@ -1,10 +1,17 @@
-import React ,{ useState } from 'react';
+import React ,{ useState, useEffect  } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import useTheme from '../context/ThemeContext.jsx';
 import './Navbar.css'
 
 
 function Navbar() {
   const [searchQuery ,setSearchQuery] = useState("");
+  const {theme, toggleTheme} = useTheme();
+  
+  useEffect(() => {
+  // Apply theme to the HTML element
+  document.documentElement.setAttribute('data-theme', theme);
+}, [theme]);  // Run whenever theme changes
   const navigate = useNavigate();
   const handleSearch = (e) => {
     e.preventDefault();
@@ -36,6 +43,9 @@ function Navbar() {
             />
           </form>
         </div>
+        <button onClick={toggleTheme} className="theme-toggle">
+  {theme === 'light' ? '🌙' : '☀️'}
+</button>
       </div>
     </nav>
   );
