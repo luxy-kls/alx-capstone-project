@@ -3,7 +3,7 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease;
   text-decoration: none;
   color: inherit;
   display: flex;
@@ -12,9 +12,18 @@
   cursor: pointer;
 }
 
+[data-theme="dark"] .book-card {
+  background: #2c2c2c;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
 .book-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .book-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 }
 
 .book-card-image {
@@ -25,6 +34,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .book-card-image {
+  background-color: #1a1a1a;
 }
 
 .book-card-image img {
@@ -50,6 +64,11 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .book-card-title {
+  color: rgba(255, 255, 255, 0.87);
 }
 
 .book-card-author {
@@ -60,6 +79,11 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .book-card-author {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .book-card-rating {
@@ -77,4 +101,9 @@
   font-size: 0.75rem;
   align-self: flex-start;
   margin-top: auto;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .book-card-category {
+  background-color: #2980b9;
 }

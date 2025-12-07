@@ -9,6 +9,11 @@
   border-radius: 12px;
   margin-bottom: 3rem;
   text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
 }
 
 .hero-content h1 {
@@ -29,6 +34,11 @@
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .book-section h2 {
+  color: rgba(255, 255, 255, 0.87);
 }
 
 /* Responsive */
