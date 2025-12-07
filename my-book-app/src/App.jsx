@@ -16,7 +16,7 @@ import Footer from './components/Footer.jsx';
 function App() {
 
   return (
-    <ThemeProvider  data-theme={theme}>
+    <ThemeProvider>
     <LibraryProvider>
     <Router>
       <div className="App">
