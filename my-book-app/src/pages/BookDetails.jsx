@@ -93,7 +93,7 @@ const thumbnail = imageLinks?.thumbnail || 'placeholder'
         )}
         
         <button 
-        className="add-to-library-btn"
+        className="add-to-library-btn success-btn "
         onClick={() => addToLibrary(book)}
         disabled={bookSaved}
 >
