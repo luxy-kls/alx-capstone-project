@@ -10,7 +10,7 @@ const { library, removeFromLibrary } = useLibrary();
 
 if (library.length === 0) {
   return (
-    <div className="my-library">
+    <div className="my-library page-fade-in">
       <h1>My Library</h1>
       <p>📚 Your library is empty!</p>
       <p>Start adding books to see them here.</p>
@@ -18,7 +18,7 @@ if (library.length === 0) {
   );
 }
   return(
-   <div className="my-library">
+   <div className="my-library page-fade-in">
      <h1>My Library</h1>
     <p>You have {library.length} book{library.length !== 1 ? 's' : ''} saved</p>
     <BookGrid books={library} />

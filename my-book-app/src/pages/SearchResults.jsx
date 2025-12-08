@@ -40,7 +40,7 @@ function SearchResults(){
 
   
  return (
-   <div className="search-results">
+   <div className="search-results page-fade-in">
      <h1>Search Results</h1>
     <p>Found {books.length} books for "{query}"</p>
     {books.length === 0 ? (

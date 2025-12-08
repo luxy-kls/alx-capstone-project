@@ -46,10 +46,10 @@ if (loading) return <LoadingSpinner />;
 if (error) return <ErrorMessage message={error} />;
 
   return (
-  <div className="browse">
+  <div className="browse page-fade-in">
     
     {/* Sidebar with categories */}
-    <div className="browse-sidebar">
+    <div className="browse-sidebar stagger-fade-in">
       <h2>Categories</h2>
       {categories.map((category) => (
         <button
@@ -63,7 +63,7 @@ if (error) return <ErrorMessage message={error} />;
     </div>
     
     {/* Main content */}
-    <div className="browse-content">
+    <div className="browse-content stagger-fade-in">
       <h1>Browse {selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)} Books</h1>
       <p>Found {books.length} books</p>
       <BookGrid books={books} />

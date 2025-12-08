@@ -59,7 +59,7 @@ const {
 const thumbnail = imageLinks?.thumbnail || 'placeholder'
 
   return(
-       <div className="book-details">
+       <div className="book-details page-fade-in">
       
       {/* Header Section */}
     <div className="book-details-header">
