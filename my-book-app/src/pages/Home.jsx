@@ -40,9 +40,9 @@ function Home(){
   
   // for the display session 
   return (
-  <div className="home">
+  <div className="home page-fade-in">
     {/* Hero Section */}
-    <section className="hero">
+    <section className="hero stagger-fade-in">
       <div className="hero-content">
         <h1>📚 Discover Your Next Favorite Book</h1>
         <p>Explore thousands of books, track your reading, and build your personal library</p>
@@ -50,13 +50,13 @@ function Home(){
     </section>
     
     {/* Trending Books Section */}
-    <section className="book-section">
+    <section className="book-section stagger-fade-in">
       <h2>📖 Trending Now</h2>
       <BookGrid books={trendingBooks.slice(0, 8)} />
     </section>
     
     {/* Fiction Books Section */}
-    <section className="book-section">
+    <section className="book-section stagger-fade-in">
       <h2>✨ Popular Fiction</h2>
       <BookGrid books={fictionBooks.slice(0, 8)} />
     </section>
