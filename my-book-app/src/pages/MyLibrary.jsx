@@ -21,7 +21,11 @@ if (library.length === 0) {
    <div className="my-library page-fade-in">
      <h1>My Library</h1>
     <p>You have {library.length} book{library.length !== 1 ? 's' : ''} saved</p>
-    <BookGrid books={library} />
+    <BookGrid 
+  books={library} 
+  showRemoveButton={true}
+  onRemove={removeFromLibrary}
+/>
    </div>
   );
 }

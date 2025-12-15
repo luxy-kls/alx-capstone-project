@@ -152,3 +152,48 @@
   background-color: #2980b9;
   transform: translateX(5px);
 }
+/* Remove Button Styling */
+.remove-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.danger-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.danger-btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.danger-btn:active {
+  transform: translateY(0);
+}
+
+[data-theme="dark"] .danger-btn {
+  background-color: #c0392b;
+}
+
+[data-theme="dark"] .danger-btn:hover {
+  background-color: #a93226;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+}
+
+/* Adjust book card content to accommodate button */
+.book-card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}

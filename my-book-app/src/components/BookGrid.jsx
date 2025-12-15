@@ -2,7 +2,7 @@ import React from 'react';
 import BookCard from './BookCard';
 import './BookGrid.css';
 
-function BookGrid({ books }) {
+function BookGrid({ books, showRemoveButton, onRemove }) {
   // If no books, show empty state
   if (!books || books.length === 0) {
     return (
@@ -15,7 +15,12 @@ function BookGrid({ books }) {
   return (
     <div className="book-grid">
       {books.map((book) => (
-        <BookCard key={book.id} book={book} />
+        <BookCard 
+  key={book.id} 
+  book={book}
+  showRemoveButton={showRemoveButton}
+  onRemove={onRemove}
+/>
       ))}
     </div>
   );

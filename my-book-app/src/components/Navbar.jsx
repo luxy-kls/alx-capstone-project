@@ -24,7 +24,7 @@ function Navbar() {
  return (
     <nav className='navbar'>
       <div className="navbar-container">
-        <Link className="navbar-logo" to="/">Bookhub</Link>
+        <Link className="navbar-logo" to="/">📚ReadStack</Link>
         
         <ul className="navbar-menu">
           <Link to="/">Home</Link>
